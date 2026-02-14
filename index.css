@@ -1,0 +1,232 @@
+body{
+    background-image: linear-gradient(315deg,rgb(172, 75, 75) 0%, rgba(255, 168, 168, 1) 100%);
+    /*background-color: rgb(196, 101, 117);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+.heart{
+    z-index: -1;
+    position: fixed;
+    top: -40px;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+.passwordSection{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.textbox{
+    padding: 10px;
+    border-radius: 200px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: rgb(255, 129, 129);
+    margin-bottom: 30px;
+}
+
+.textbox > span{
+    color: white;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.keypad{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.keypad > .innerRow{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.keypad > .innerRow >  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: white;
+    border: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(255, 129, 129);
+
+    transition-property: scale;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.buttons > button, .outerNoButton{
+    width: 250px;
+    padding: 25px;
+
+    background: linear-gradient(to right, rgb(255, 164, 164), white);
+    background-size: 200%;
+    background-position: right;
+    border: 0;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(255, 160, 176);
+
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+}
+
+.outerNoButton{
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+
+.buttons > button:hover{
+    background-position: left;
+    color: white;
+}
+
+.noButton{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+button:hover{
+    scale: 1.2;
+}
+
+button:active{
+    transition-property: none!important;
+    scale: 0.95;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.mainSection, .messageSection{
+    display: none;
+}
+
+.special{
+    text-align: center;
+    background: linear-gradient(
+        to right,
+        #ffffff,
+        #ffffff,
+        #ffc3c3,
+        #ffffff);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 3s linear infinite;
+}
+
+.mainSection, .messageSection{
+    width: 75%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+
+    transition-property: opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.9s;
+}
+
+.flyUp{
+    animation-name: flyUp;
+    animation-timing-function: ease;
+    animation-duration: 2.5s;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+@keyframes flyUp {
+    to {
+        transform: translateY(-160%)
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes gradientAnimation {
+    from {
+        background-position: 200% 50%;
+    }
+    to {
+        background-position: 0% 50%;
+    }
+}

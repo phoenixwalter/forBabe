@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>For my One</title>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <button id="outerNono" class="outerNoButton">No 😢</button>
+        <div class="passwordSection" id="password">
+            <div class="textbox">
+                <span id="textbox">DD/MM/YYYY</span>
+            </div>
+            <div class="keypad">
+                <div class="innerRow">
+                    <button class="numberBtn" onclick="press(1)"><span class="number">1</span></button>
+                    <button class="numberBtn" onclick="press(2)"><span class="number">2</span></button>
+                    <button class="numberBtn" onclick="press(3)"><span class="number">3</span></button>
+                </div>
+                <div class="innerRow">
+                    <button class="numberBtn" onclick="press(4)"><span class="number">4</span></button>
+                    <button class="numberBtn" onclick="press(5)"><span class="number">5</span></button>
+                    <button class="numberBtn" onclick="press(6)"><span class="number">6</span></button>
+                </div>
+                <div class="innerRow">
+                    <button class="numberBtn" onclick="press(7)"><span class="number">7</span></button>
+                    <button class="numberBtn" onclick="press(8)"><span class="number">8</span></button>
+                    <button class="numberBtn" onclick="press(9)"><span class="number">9</span></button>
+                </div>
+                <div class="innerRow">
+                    <button class="hide">none</button>
+                    <button class="numberBtn" onclick="press(0)"><span class="number">0</span></button>
+                    <button class="numberBtn" onclick="press(-1)"><span class="number"><i class="fa-solid fa-delete-left"></i></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="mainSection" id="main">
+            <h1 class="special"> <span style="color: white;">Baby, will you be my Valentines this year, next year and more til death do us part? ❤️💖</span></h1>
+            <div class="buttons">
+                <button id="yes">Yes ❤️</button>
+                <button id="nono">No 😢</button>
+            </div>
+            <h3 id="nope">Nope, you can't do that :3</h3>
+        </div>
+        <div class="messageSection" id="message">
+            <h1 class="special">Yayy. See you tomorrow! Love you babee. &lt;3 <span style="color: white;">🍫</span></h1>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    </body>
+</html>
